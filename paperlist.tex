@@ -3,7 +3,7 @@
 % 新增文献:refs.bib 加一条 entry + keywords 写分类标签,push 后网页自动更新
 \documentclass[11pt]{article}
 \usepackage[UTF8]{ctex}
-\usepackage[backend=biber, style=authoryear, sorting=ynt, maxbibnames=99]{biblatex}
+\usepackage[backend=biber, style=numeric, sorting=none, maxbibnames=99]{biblatex}
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
 \addbibresource{refs.bib}
 
@@ -28,7 +28,7 @@
 \begin{itemize}
 \item \textbf{新增}:往 \texttt{refs.bib} 粘贴一条 BibTeX 条目(谷歌学术或 arXiv 都能导出);
 \item \textbf{分类}:给条目写 \texttt{keywords},可多个——同一篇论文会自动出现在所有对应分类下;
-\item \textbf{引用}:正文写 \verb|\parencite{yao2023react}|,即“Yao 等 (2023)”,并链接到下方条目;
+\item \textbf{引用}:正文写 \verb|\parencite{yao2023react}|,渲染成 “[3]” 这样的编号,点击跳到文末对应条目;
 \item \textbf{发布}:\texttt{git push} 后 GitHub Actions 自动构建部署,不需要本地编译;
 本地预览则运行 \texttt{./build.sh},打开 \texttt{docs/paperlist.html}。
 \end{itemize}

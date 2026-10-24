@@ -10,7 +10,8 @@
 |---|---|
 | 新增文献 | 在 `refs.bib` 粘贴一条 BibTeX 条目 |
 | 分类 | 写条目的 `keywords` 字段,可多个;每个标签对应 `paperlist.tex` 里一个 `\printbibliography[keyword=…]` 小节 |
-| 正文引用 | `\parencite{key}`,生成 “Yao 等 (2023)” 并自动链接到下方条目 |
+| 正文引用 | `\parencite{key}`,渲染成 `[3]` 这样的编号,并链接到文末条目 |
+| 条目链接 | 条目的 `url` 字段(多为 arXiv)会以可点击链接展示 |
 | 发布 | `git push` 后 Actions 自动构建部署,无需本地编译 |
 | 本地预览 | `./build.sh`,打开 `docs/paperlist.html`(pdf:`./build.sh pdf`) |
 
