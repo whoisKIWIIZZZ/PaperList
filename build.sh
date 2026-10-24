@@ -27,6 +27,11 @@ perl -pi -e 's|</head>|<link href="theme.css" rel="stylesheet" type="text/css" /
 
 # GitHub Pages 根地址需要 index.html
 mv docs/paperlist.html docs/index.html
+# 较新的 tex4ht 把引用写成 paperlist.html#X0-key,改名后会 404,统一改成页内锚点
+perl -pi -e "s{href=(['\"])paperlist\.html#}{href=\$1#}g; s{href=(['\"])paperlist\.html\1}{href=\$1index.html\$1}g" docs/index.html
+if grep -q "href=['\"]paperlist\.html" docs/index.html; then
+  echo "!! index.html 里仍有指向 paperlist.html 的链接"; exit 1
+fi
 
 if [ "${1:-}" = "pdf" ]; then
   latexmk -xelatex -interaction=nonstopmode paperlist.tex
