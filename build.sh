@@ -14,6 +14,9 @@ make4ht -x paperlist.tex "html5,mathjax" -d docs 2>&1 | tail -3
 # tex4ht 在未使用 \maketitle 时 <title> 是空的,补上(perl 写法 macOS/CI 皆可用)
 perl -pi -e 's|<title>[^<]*</title>|<title>Paper List 文献清单</title>|' docs/paperlist.html
 
+# GitHub Pages 根地址需要 index.html
+mv docs/paperlist.html docs/index.html
+
 if [ "${1:-}" = "pdf" ]; then
   latexmk -xelatex -interaction=nonstopmode paperlist.tex
   cp paperlist.pdf docs/
