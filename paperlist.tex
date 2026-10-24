@@ -1,14 +1,44 @@
 % 文献库主文档(中文模板)
 % 引擎必须用 XeLaTeX(中文);HTML 构建由 make4ht --engine xelatex 完成
 % 新增文献:refs.bib 加一条 entry + keywords 写分类标签,push 后网页自动更新
-\documentclass[11pt]{article}
-\usepackage[UTF8]{ctex}
-\usepackage[backend=biber, style=numeric, sorting=none, maxbibnames=99]{biblatex}
-\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+% 版式仿 NeurIPS 模板:Times 字体、5.5in 正文宽、标题上粗下细两条线、绿色引用编号
+% arXiv 号不用手写 BibTeX:正文直接写号,运行 python3 scripts/arxiv2bib.py 自动换成 \cite
+\documentclass[10pt,letterpaper]{article}
+\usepackage[UTF8, scheme=plain]{ctex}
+\setmainfont{TeX Gyre Termes}  % Times 克隆,即参考 PDF 里的 Nimbus Roman
+\usepackage[backend=biber, style=numeric, sorting=none, maxbibnames=99,
+            giveninits=false, uniquename=false, doi=false, isbn=false,
+            url=false, eprint=false]{biblatex}
+\usepackage[colorlinks=true, linkcolor=red, urlcolor=blue, citecolor=green]{hyperref}
 \addbibresource{refs.bib}
 
-% 关键:nocite 让未被正文引用过的条目也出现在各分类列表里
-\nocite{*}
+% ---- 文献条目格式:Authors. Title. \textit{arXiv preprint arXiv:xxxx}, 2025. ----
+\renewbibmacro{in:}{}
+\DeclareFieldFormat[article]{title}{#1}
+\DeclareFieldFormat{journaltitle}{\iffieldundef{url}{\mkbibemph{#1}}{\href{\thefield{url}}{\mkbibemph{#1}}}}
+\DeclareFieldFormat{booktitle}{\iffieldundef{url}{\mkbibemph{#1}}{\href{\thefield{url}}{\mkbibemph{#1}}}}
+\renewbibmacro*{issue+date}{\setunit{\addcomma\space}\usebibmacro{date}\newunit}
+
+\ifdefined\HCode\else
+  % 以下只作用于 PDF(HTML 版面由 css/theme.css 负责)
+  \usepackage[letterpaper, textwidth=5.5in, textheight=9in, top=1in]{geometry}
+  \usepackage{titlesec}
+  \titleformat{\section}{\large\bfseries\raggedright}{\thesection}{1em}{}
+  \titleformat{\subsection}{\normalsize\bfseries\raggedright}{\thesubsection}{1em}{}
+  \titlespacing*{\section}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
+  \titlespacing*{\subsection}{0pt}{10pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{5.5pt plus 1pt}
+  \makeatletter
+  \renewcommand{\@maketitle}{%
+    \vbox{\hsize\textwidth\linewidth\hsize\vskip 0.1in
+      \hrule height 4pt\vskip 0.25in
+      \centering{\LARGE\bfseries\@title\par}\vskip 0.29in
+      \hrule height 1pt\vskip 0.15in
+      {\normalsize\@author\quad\@date\par}}%
+    \vskip 0.3in}
+  \makeatother
+\fi
 
 \title{Paper List}
 \author{whoisKIWIIZZZ}
@@ -33,50 +63,76 @@
 % \item \textbf{发布}:\texttt{git push} 后 GitHub Actions 自动构建部署,不需要本地编译;
 % 本地预览则运行 \texttt{./build.sh},打开 \texttt{docs/paperlist.html}。
 % \end{itemize}
-
+\begin{abstract}
+    整理一系列文章为了后续能快速的找到内容.
+\end{abstract}
 \section{World Model}
 \subsection{JEPAs}
 Training object is (likely) representations, and use CEM to MPC.
 \begin{itemize}
-    \item I-JEPA,V-JEPA 2506.09985,2512.10942,2404.08471,2301.08243,2603.14482
-    \item leWM-based 2603.19312,2605.26379,2606.32026,
-    \item DINO-WM 2411.04983
+    \item I-JEPA,V-JEPA \cite{assran2025vjepa,chen2025vljepa,bardes2024revisiting,assran2023selfsupervised,murlabadia2026vjepa}
+    \item leWM-based \cite{maes2026leworldmodel,klindt2026when,wang2026adajepa},
+    \item DINO-WM \cite{zhou2024dinowm}
+    \item \cite{zhang2026hierarchical}, Hierarchical planning 
 \end{itemize}
 \subsection{latent representations}
+I think that JEPA also helps for building a 'good' representations of model prediction. Here are works that focusing on training the encoder instead of just next-step prediction.
 \begin{itemize}
-    \item 2603.12231, smoothness for representations
-    \item 2607.27924, project DINO token
-    \item  \textit{2609.29171, planning in latent}
+    \item \cite{wang2026temporal}, smoothness for representations
+    \item \cite{liu2026odeworld}, project DINO token
+    \item  \textit{\cite{yuan2026representation}, planning in latent}
 \end{itemize}
 \subsection{WAMs}
+\begin{itemize}
+    \item \cite{zhang2026imagewam}, predict future
+    \item \cite{chen2026flowwam}, use optical-flow. \textit{TODO:add lfy's work}
+    \item \cite{wang2026beyond}, just denoising w/o predict future
+\end{itemize}
 \subsection{Others}
 \begin{itemize}
-    \item 2603.04553,Point WAMs
-    \item 2610.26844, dataset for other goals
+    \item \cite{daniel2026latent},Point WMs
+    \item \cite{nam2026anygoal}, dataset for other goals
+    \item \cite{guo2026scaling}, testing on Video-gen
+    \item \cite{liu2026odeworld}, use ODE as training objective
+    \item \cite{huang2026nano}, good pipeline on WM
+    \item \cite{liu2026reasoning,hu2025arc},  ARC-AGI (idk where to put it)
+    \item \cite{vafa2025what}, Probe to find whether WM can find the original laws(e.g.,gravity)
 \end{itemize}
 \section{Loop}
 \begin{itemize}
-    \item 2602.02156,LoopViT
-    \item 2512.19941, use DP to find  training-free loops in ViTs
-    \item 2604.09168, refine in Diffusion
-    \item 2609.40305-loopdit
+    \item \cite{shu2026loopvit},LoopViT
+    \item \cite{jacobs2025blockrecurrent}, use DP to find  training-free loops in ViTs
+    \item \cite{goyal2026elt}, refine in Diffusion
+    \item \cite{chng2026looped}, LoopDiT
+    \item \cite{lu2026looped}, LoopWM
 \end{itemize}
 \section{NCA}
 \begin{itemize}
-    \item 2604.24990, Summary
-    \item 2609.01449, Diffusion as NCA 
-    \item 2610.08518,2609.36126, 2D reasoning w/ NCA
+    \item \cite{spitznagel2026new}, Summary
+    \item \cite{drozdova2026diffusion}, Diffusion as NCA 
+    \item \cite{spitznagel20262d,etcheverry2026reasoning}, 2D reasoning w/ NCA
+    \item Yitao Xu\footnote{thx  for his wonderful intuition!}'s prior work:
+    \begin{itemize}
+        \item Growing NCA \cite{mordvintsev2020growing}, the original NCA
+        \item DyNCA \cite{pajouheshgar2023dynca}, dynamic texture synthesis by motion supervision
+        \item MeshNCA \cite{pajouheshgar2024meshnca}, texture synthesis on meshes
+        \item \cite{pajouheshgar2025neural}, NCA + appearance decoder, from cells to high-res pixels
+        \item NoiseNCA \cite{pajouheshgar2024noisenca}, noisy seed for spatio-temporal continuity
+        \item \cite{kim2026neural}, Neural Particle Automata
+    \end{itemize}
 \end{itemize}
 \section{Theory}
 \begin{itemize}
-    \item 2202.10054,question ID/OOD acc using gradient flow. Check if u wish to see analyses of subspace
-    \item 2401.17505,great work of "capacity" of models\footnote{here to say, inductive bias is needed for models to learn}
+    \item \cite{kumar2022finetuning},question ID/OOD acc using \textbf{gradient flow}. Check if u wish to see analyses of subspace
+    \item \cite{papadopoulos2024arrows},great work of "capacity" of models\footnote{here to say, inductive bias is needed for models to learn}
     \item several works of JEPAs.
     \begin{itemize}
-        \item 2605.26379,Gaussian world, how SIGReg work ?
-        \item 2608.22764, LpWM , sprase 
-        \item 2603.12231, smoothness for representations
+        \item \cite{klindt2026when},Gaussian world, how SIGReg work ?
+        \item \cite{kuang2026lpwm}, LpWM , sprase-space analysis 
+        \item \cite{wang2026temporal}, smoothness for representations
+        \item \cite{zhang2026identifiability}, decode state of WMs to identify
     \end{itemize}
+    \item \cite{tropp2010userfriendly}, random matrixs
 \end{itemize}
 % \section{Agent}
 % ReAct 让大模型在推理中交替“隐式思考”和“外部行动” \parencite{yao2023react};
@@ -96,5 +152,7 @@ Training object is (likely) representations, and use CEM to MPC.
 
 % \section{全部文献}
 % \printbibliography[heading=subbibliography, title={按年份排序}]
+
+\printbibliography[title=References]
 
 \end{document}

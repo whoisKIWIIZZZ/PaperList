@@ -8,8 +8,8 @@ cd "$(dirname "$0")"
 rm -rf docs
 mkdir -p docs
 
-# html5 = 语义化标签; mathjax = 公式保留 LaTeX 源码、浏览器内渲染(对数学标题最稳)
-make4ht -x paperlist.tex "html5,mathjax" -d docs 2>&1 | tail -3
+# html5 = 语义化标签; mathjax = 公式在浏览器内渲染; fn-in = 脚注留在同一页(否则 tex4ht 把脚注拆到 paperlist2.html)
+make4ht -x paperlist.tex "html5,mathjax,fn-in" -d docs 2>&1 | tail -3
 
 if [ ! -s docs/paperlist.html ]; then
   echo "!! make4ht 没有产出 HTML,打印编译日志尾部:"

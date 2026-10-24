@@ -1,80 +1,101 @@
-/* 主题层:贴近 TeX article 的阅读版面
+/* 主题层:仿 NeurIPS 模板 PDF 的阅读版面(Times、标题上粗下细两条线、绿色引用编号)
    加载顺序:tex4ht 生成的 paperlist.css 在前,本文件在后(同权重后者胜出) */
 
-/* ===== 页面尺度(TeX measure,~75 字/行)===== */
+:root{
+  --measure: 60rem;        /* 正文最大宽度;想再宽/窄改这一个数即可 */
+  --cite: #10a010;         /* 引用编号:PDF 里是纯绿,屏幕上略压暗以便阅读 */
+  --link: #1a4fd0;
+  --rule: currentColor;
+}
+
+/* ===== 页面尺度:桌面端用足宽度,移动端两侧留白 ===== */
 body{
-  max-width: 41rem;
+  max-width: var(--measure);
   margin: 2.5rem auto 5rem;
-  padding: 0 1.15rem;
-  font-size: 1.03rem;
-  line-height: 1.52;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+  font-size: 1.0625rem;
+  line-height: 1.5;
   text-align: justify;
   hyphens: auto;
   -webkit-hyphens: auto;
 }
 @media (max-width: 46rem){
-  body{ margin-top: 1.2rem; }
+  body{ margin-top: 1.2rem; font-size: 1rem; }
 }
 
-/* ===== 字体:西文衬线 + 中文宋体,贴近 Computer Modern 观感 ===== */
+/* ===== 字体:Times 系(参考 PDF 用 Nimbus Roman)+ 中文宋体 ===== */
 body{
-  font-family: "Latin Modern Roman", "CMU Serif", "STIX Two Text",
-               "Songti SC", "STSong", "Noto Serif CJK SC", "SimSun",
-               Georgia, "Times New Roman", serif;
+  font-family: "TeX Gyre Termes", "Nimbus Roman", "Nimbus Roman No9 L",
+               "Times New Roman", Times,
+               "Songti SC", "STSong", "Noto Serif CJK SC", "SimSun", serif;
 }
 
-/* ===== 链接:内部编号引用无下划线,URL 保留下划线 ===== */
-a{ text-decoration: none; }
-a.url{ text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .14em; }
+/* ===== 链接 ===== */
+a{ text-decoration: none; color: var(--link); }
+a:hover{ text-decoration: underline; }
+a[href^="#cite."]{ color: var(--cite); }     /* \cite 编号 */
+a[href^="#fn"]{ color: #d01818; }            /* 脚注标记,同 hyperref linkcolor=red */
 
-/* ===== 标题块(center 环境)===== */
-div.center{ margin: 1.9rem 0 1.1rem; }
-div.center p{ margin: 0; }
-.center .ec-lmr-17{ font-weight: 700; font-size: 1.62em; letter-spacing: .01em; }
+/* ===== 标题块:上 4pt 粗线、下 1pt 细线,居中加粗;作者/日期在细线下方 ===== */
+div.maketitle{
+  border-top: 4px solid var(--rule);
+  margin: 0 0 2rem;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+h2.titleHead{
+  font-size: 2em; font-weight: 700; line-height: 1.2;
+  margin: 0 0 .9rem; padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+div.maketitle br{ display: none; }
+div.author, div.date{ display: inline; margin: 0 .6em; }
+div.author span, div.date span{ font-size: 1em; }
 
-/* ===== 章节标题:TeX article 的“加粗衬线、题目后短空”===== */
-h3.sectionHead{
-  font-size: 1.30em;
+/* ===== 章节标题:\large 加粗、编号后 1em ===== */
+h3.sectionHead, h3.likesectionHead{
+  font-size: 1.3em;
   line-height: 1.3;
-  margin: 1.85em 0 .5em;
+  margin: 1.7em 0 .55em;
   font-weight: 700;
 }
-h4.likesubsectionHead{
+h4.subsectionHead, h4.likesubsectionHead{
   font-size: 1.05em;
-  font-style: italic;
   font-weight: 700;
-  margin: 1.15em 0 .4em;
+  margin: 1.2em 0 .45em;
 }
-h3 .titlemark{ white-space: pre; margin-right: .25em; }
+.titlemark{ white-space: normal; margin-right: .9em; }
 
-/* ===== 段落:连续段落留小空隙,不做缩进 ===== */
-p{ margin-top: 0; margin-bottom: .55em; }
-p + p{ margin-top: .2em; }
-p.noindent{ text-indent: 0; }
+/* ===== 段落:无缩进,段间小空隙(\parskip 5.5pt)===== */
+p{ margin-top: 0; margin-bottom: .45em; }
+p + p{ margin-top: .35em; }
+p.noindent, p.indent{ text-indent: 0; }
 
 /* ===== 项目列表 ===== */
-ul.itemize1{ margin: .35em 0 .95em; padding-left: 2.1em; }
-li.itemize{ margin: .28em 0; }
+ul.itemize1, ul.itemize2{ margin: .3em 0 .8em; padding-left: 2.6em; }
+ul.itemize2{ list-style-type: "– "; padding-left: 2em; }
+li.itemize{ margin: .22em 0; }
 
-/* ===== 文献表:编号悬挂在左侧,不参与断行 ===== */
-dl.thebibliography{ margin: 0; }
+/* ===== 文献表:[n] 悬挂在左侧 ===== */
+dl.thebibliography{ margin: 0; font-size: .96em; }
 dt.thebibliography{
   float: left;
   clear: left;
-  width: 3em;
+  width: 2.6em;
   text-align: right;
-  margin-right: .75em;
-  font-weight: 700;
   font-variant-numeric: tabular-nums;
-  white-space: pre;
+  white-space: nowrap;
 }
 dd.thebibliography{
-  margin: 0 0 .62em 3.75em;
-  text-align: left;      /* 长条目不拉伸对齐 */
-  text-indent: 0;
+  margin: 0 0 .55em 3.3em;
+  text-align: justify;
 }
-dd.thebibliography p{ margin: 0; text-indent: 0; }
-dd.thebibliography a{ overflow-wrap: anywhere; word-break: break-all; }
+dd.thebibliography p{ margin: 0; }
+dd.thebibliography a{ overflow-wrap: anywhere; }
 
-/* 长分类小节的间歇:每张表尾部加呼吸感 */
-dl.thebibliography::after{ content: ""; display: block; height: .35em; }
+/* ===== 脚注:页底短线 + 小字号 ===== */
+div.footnotes{ margin-top: 2.5rem; font-size: .85em; }
+div.footnotes::before{
+  content: ""; display: block; width: 12rem;
+  border-top: 1px solid var(--rule); margin-bottom: .5rem;
+}
