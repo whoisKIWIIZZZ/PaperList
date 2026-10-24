@@ -1,0 +1,314 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{vaswani2017attention}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=7f28e84700536646dd6620a0db07ad09}{%
+           family={Vaswani},
+           familyi={V\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=06649ebab1ea5cac0250746a19764975}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2fd2982e30ebcec93ec1cf76e0d797fd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Llion},
+           giveni={L\bibinitperiod}}}%
+        {{hash=27b07e4eacbf4ef7a1438e3badb7dd8d}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Aidan\bibnamedelima N},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=540fcd72e1fa4bbed46604f4e6cff817}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={{Ł}ukasz},
+           giveni={Ł\bibinitperiod}}}%
+        {{hash=95595a0fefb86187cbc36e551017d332}{%
+           family={Polosukhin},
+           familyi={P\bibinitperiod},
+           given={Illia},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{fullhash}{cb26e47f6b8133865271fc8483132297}
+      \strng{fullhashraw}{cb26e47f6b8133865271fc8483132297}
+      \strng{bibnamehash}{cb26e47f6b8133865271fc8483132297}
+      \strng{authorbibnamehash}{cb26e47f6b8133865271fc8483132297}
+      \strng{authornamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorfullhash}{cb26e47f6b8133865271fc8483132297}
+      \strng{authorfullhashraw}{cb26e47f6b8133865271fc8483132297}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{Attention Is All You Need}
+      \field{year}{2017}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1706.03762
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1706.03762
+      \endverb
+      \keyw{classic}
+    \endentry
+    \entry{kaplan2020scaling}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{4}{}{%
+        {{hash=9e85370e215d552f72c95a2b63a37802}{%
+           family={Kaplan},
+           familyi={K\bibinitperiod},
+           given={Jared},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b51e7c5fe92844f39ce52b8a5fa5675f}{%
+           family={McCandlish},
+           familyi={M\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod}}}%
+        {{hash=eb1d3044b466619459c76843f0e98bb9}{%
+           family={Henighan},
+           familyi={H\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=7c16e8d36475e58d4f2d161e6ecb7704}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Tom\bibnamedelima B},
+           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{b2dab6d559c573eed2d134686678fe84}
+      \strng{fullhash}{99f7dc21b72feb4fd2f922328bea5123}
+      \strng{fullhashraw}{99f7dc21b72feb4fd2f922328bea5123}
+      \strng{bibnamehash}{99f7dc21b72feb4fd2f922328bea5123}
+      \strng{authorbibnamehash}{99f7dc21b72feb4fd2f922328bea5123}
+      \strng{authornamehash}{b2dab6d559c573eed2d134686678fe84}
+      \strng{authorfullhash}{99f7dc21b72feb4fd2f922328bea5123}
+      \strng{authorfullhashraw}{99f7dc21b72feb4fd2f922328bea5123}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2001.08361}
+      \field{title}{Scaling Laws for Neural Language Models}
+      \field{year}{2020}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2001.08361
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2001.08361
+      \endverb
+      \keyw{classic,scaling}
+    \endentry
+    \entry{yao2023react}{inproceedings}{}{}
+      \name{author}{7}{}{%
+        {{hash=5c1b62cbd4e181d818b927549813cf73}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Shunyu},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4fc64f0dbaf7cb8f21c7c85d580cdb15}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2cb7d2d6e42d109fa2c5086d6c8f6a63}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Dian},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a926c34a0eebdaaa30da36b46bd2192c}{%
+           family={Du},
+           familyi={D\bibinitperiod},
+           given={Nan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=20b3779bbd037bbfdd1ffd3967624997}{%
+           family={Shafran},
+           familyi={S\bibinitperiod},
+           given={Izhak},
+           giveni={I\bibinitperiod}}}%
+        {{hash=997c3143c2e5d593e816d2ff704fbf98}{%
+           family={Narasimhan},
+           familyi={N\bibinitperiod},
+           given={Karthik},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2923de2da7f9b32b957552e414b6bc16}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Yuan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{4ae4be538df04cfc1571685175562cad}
+      \strng{fullhash}{6f22c9f891fbcfb7465b1c3157b57023}
+      \strng{fullhashraw}{6f22c9f891fbcfb7465b1c3157b57023}
+      \strng{bibnamehash}{6f22c9f891fbcfb7465b1c3157b57023}
+      \strng{authorbibnamehash}{6f22c9f891fbcfb7465b1c3157b57023}
+      \strng{authornamehash}{4ae4be538df04cfc1571685175562cad}
+      \strng{authorfullhash}{6f22c9f891fbcfb7465b1c3157b57023}
+      \strng{authorfullhashraw}{6f22c9f891fbcfb7465b1c3157b57023}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Learning Representations}
+      \field{title}{ReAct: Synergizing Reasoning and Acting in Language Models}
+      \field{year}{2023}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2210.03629
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2210.03629
+      \endverb
+      \keyw{agent}
+    \endentry
+    \entry{schick2023toolformer}{inproceedings}{}{}
+      \name{author}{7}{}{%
+        {{hash=cc3adfa0ec8180459be4de68ba1b83cd}{%
+           family={Schick},
+           familyi={S\bibinitperiod},
+           given={Timo},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0bb901d943bc0a6e21f09a9e49ff10b6}{%
+           family={Dwivedi-Yu},
+           familyi={D\bibinithyphendelim Y\bibinitperiod},
+           given={Jane},
+           giveni={J\bibinitperiod}}}%
+        {{hash=61d31fff88d8de87879feaec047cfa8f}{%
+           family={Dessì},
+           familyi={D\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+        {{hash=bf1c252caab6616dc5c18fee05edd006}{%
+           family={Lomeli},
+           familyi={L\bibinitperiod},
+           given={Maria},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1dbd3a5b42828fb2cebd7786488ba425}{%
+           family={Zettlemoyer},
+           familyi={Z\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod}}}%
+        {{hash=ffdf27711872d4e38ec8e24641c7a717}{%
+           family={Cancedda},
+           familyi={C\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3669dc61c228df3d7b95b1306107fa82}{%
+           family={Scialom},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{1c7bad5da70178a9b108151a83138342}
+      \strng{fullhash}{3d84a92f7f414158c0a1c91757b574d1}
+      \strng{fullhashraw}{3d84a92f7f414158c0a1c91757b574d1}
+      \strng{bibnamehash}{3d84a92f7f414158c0a1c91757b574d1}
+      \strng{authorbibnamehash}{3d84a92f7f414158c0a1c91757b574d1}
+      \strng{authornamehash}{1c7bad5da70178a9b108151a83138342}
+      \strng{authorfullhash}{3d84a92f7f414158c0a1c91757b574d1}
+      \strng{authorfullhashraw}{3d84a92f7f414158c0a1c91757b574d1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{Toolformer: Language Models Can Teach Themselves to Use Tools}
+      \field{year}{2023}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2302.04761
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2302.04761
+      \endverb
+      \keyw{agent}
+    \endentry
+    \entry{lewis2020rag}{inproceedings}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{4}{}{%
+        {{hash=ecbe786a5668bf643d74bb24fe1c3cfe}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=79978685fd7b37606022b06c0f6419a1}{%
+           family={Perez},
+           familyi={P\bibinitperiod},
+           given={Ethan},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d205faec67355b6e0ec49f82a492324c}{%
+           family={Piktus},
+           familyi={P\bibinitperiod},
+           given={Aleksandra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e1c32989a78998fe3c03c981d0da2dc7}{%
+           family={Petroni},
+           familyi={P\bibinitperiod},
+           given={Fabio},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{f238c3bfc4b30650dd17e65c4aadfc66}
+      \strng{fullhash}{058bb7cecbfa91d86b2764d78a0999f3}
+      \strng{fullhashraw}{058bb7cecbfa91d86b2764d78a0999f3}
+      \strng{bibnamehash}{058bb7cecbfa91d86b2764d78a0999f3}
+      \strng{authorbibnamehash}{058bb7cecbfa91d86b2764d78a0999f3}
+      \strng{authornamehash}{f238c3bfc4b30650dd17e65c4aadfc66}
+      \strng{authorfullhash}{058bb7cecbfa91d86b2764d78a0999f3}
+      \strng{authorfullhashraw}{058bb7cecbfa91d86b2764d78a0999f3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{Retrieval-Augmented Generation for Knowledge-Intensive {NLP} Tasks}
+      \field{year}{2020}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2005.11401
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2005.11401
+      \endverb
+      \keyw{rag}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

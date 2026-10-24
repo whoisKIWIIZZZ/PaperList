@@ -10,46 +10,91 @@
 % 关键:nocite 让未被正文引用过的条目也出现在各分类列表里
 \nocite{*}
 
-\title{Paper List 文献清单}
-\author{Yishou Zhuo}
+\title{Paper List}
+\author{whoisKIWIIZZZ}
 \date{\today}
 
 \begin{document}
+\maketitle
 % \maketitle 会在 HTML 里丢失 xeCJK 中文(tex4ht 已知问题),改为手动标题页
-\begin{center}
-{\LARGE Paper Lists 文献列表}\\[0.6ex]
-{\normalsize Yishou Zhuo}\\[0.3ex]
-{\normalsize 更新于 \today}
-\end{center}
+% \begin{center}
+% {\LARGE Paper Lists}\\[0.6ex]
+% {\normalsize whoisKIWIIZZZ}\\[0.3ex]
+% {\normalsize \today}
+% \end{center}
 
 
-\section{如何维护这个列表}
-每篇文献是一条 BibTeX 记录,都存在 \texttt{refs.bib} 里:
+% \section{如何维护这个列表}
+% 每篇文献是一条 BibTeX 记录,都存在 \texttt{refs.bib} 里:
+% \begin{itemize}
+% \item \textbf{新增}:往 \texttt{refs.bib} 粘贴一条 BibTeX 条目(谷歌学术或 arXiv 都能导出);
+% \item \textbf{分类}:给条目写 \texttt{keywords},可多个——同一篇论文会自动出现在所有对应分类下;
+% \item \textbf{引用}:正文写 \verb|\parencite{yao2023react}|,渲染成 “[3]” 这样的编号,点击跳到文末对应条目;
+% \item \textbf{发布}:\texttt{git push} 后 GitHub Actions 自动构建部署,不需要本地编译;
+% 本地预览则运行 \texttt{./build.sh},打开 \texttt{docs/paperlist.html}。
+% \end{itemize}
+
+\section{World Model}
+\subsection{JEPAs}
+Training object is (likely) representations, and use CEM to MPC.
 \begin{itemize}
-\item \textbf{新增}:往 \texttt{refs.bib} 粘贴一条 BibTeX 条目(谷歌学术或 arXiv 都能导出);
-\item \textbf{分类}:给条目写 \texttt{keywords},可多个——同一篇论文会自动出现在所有对应分类下;
-\item \textbf{引用}:正文写 \verb|\parencite{yao2023react}|,渲染成 “[3]” 这样的编号,点击跳到文末对应条目;
-\item \textbf{发布}:\texttt{git push} 后 GitHub Actions 自动构建部署,不需要本地编译;
-本地预览则运行 \texttt{./build.sh},打开 \texttt{docs/paperlist.html}。
+    \item I-JEPA,V-JEPA 2506.09985,2512.10942,2404.08471,2301.08243,2603.14482
+    \item leWM-based 2603.19312,2605.26379,2606.32026,
+    \item DINO-WM 2411.04983
 \end{itemize}
+\subsection{latent representations}
+\begin{itemize}
+    \item 2603.12231, smoothness for representations
+    \item 2607.27924, project DINO token
+    \item  \textit{2609.29171, planning in latent}
+\end{itemize}
+\subsection{WAMs}
+\subsection{Others}
+\begin{itemize}
+    \item 2603.04553,Point WAMs
+    \item 2610.26844, dataset for other goals
+\end{itemize}
+\section{Loop}
+\begin{itemize}
+    \item 2602.02156,LoopViT
+    \item 2512.19941, use DP to find  training-free loops in ViTs
+    \item 2604.09168, refine in Diffusion
+    \item 2609.40305-loopdit
+\end{itemize}
+\section{NCA}
+\begin{itemize}
+    \item 2604.24990, Summary
+    \item 2609.01449, Diffusion as NCA 
+    \item 2610.08518,2609.36126, 2D reasoning w/ NCA
+\end{itemize}
+\section{Theory}
+\begin{itemize}
+    \item 2202.10054,question ID/OOD acc using gradient flow. Check if u wish to see analyses of subspace
+    \item 2401.17505,great work of "capacity" of models\footnote{here to say, inductive bias is needed for models to learn}
+    \item several works of JEPAs.
+    \begin{itemize}
+        \item 2605.26379,Gaussian world, how SIGReg work ?
+        \item 2608.22764, LpWM , sprase 
+        \item 2603.12231, smoothness for representations
+    \end{itemize}
+\end{itemize}
+% \section{Agent}
+% ReAct 让大模型在推理中交替“隐式思考”和“外部行动” \parencite{yao2023react};
+% Toolformer 则让模型自己学会在合适的位置调用工具 \parencite{schick2023toolformer}。
+% \printbibliography[keyword=agent, heading=subbibliography, title={Agent 方法}]
 
-\section{Agent}
-ReAct 让大模型在推理中交替“隐式思考”和“外部行动” \parencite{yao2023react};
-Toolformer 则让模型自己学会在合适的位置调用工具 \parencite{schick2023toolformer}。
-\printbibliography[keyword=agent, heading=subbibliography, title={Agent 方法}]
+% \section{RAG}
+% 检索增强生成把外部知识库引入生成过程 \parencite{lewis2020rag}。
+% \printbibliography[keyword=rag, heading=subbibliography, title={RAG 论文}]
 
-\section{RAG}
-检索增强生成把外部知识库引入生成过程 \parencite{lewis2020rag}。
-\printbibliography[keyword=rag, heading=subbibliography, title={RAG 论文}]
+% \section{经典基础}
+% \printbibliography[keyword=classic, heading=subbibliography, title={必读经典}]
 
-\section{经典基础}
-\printbibliography[keyword=classic, heading=subbibliography, title={必读经典}]
+% \section{Scaling}
+% Scaling 经验律:模型规模、数据量与算力的权衡 \parencite{kaplan2020scaling}。
+% \printbibliography[keyword=scaling, heading=subbibliography, title={Scaling laws}]
 
-\section{Scaling}
-Scaling 经验律:模型规模、数据量与算力的权衡 \parencite{kaplan2020scaling}。
-\printbibliography[keyword=scaling, heading=subbibliography, title={Scaling laws}]
-
-\section{全部文献}
-\printbibliography[heading=subbibliography, title={按年份排序}]
+% \section{全部文献}
+% \printbibliography[heading=subbibliography, title={按年份排序}]
 
 \end{document}
