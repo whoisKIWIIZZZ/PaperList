@@ -1,0 +1,80 @@
+/* 主题层:贴近 TeX article 的阅读版面
+   加载顺序:tex4ht 生成的 paperlist.css 在前,本文件在后(同权重后者胜出) */
+
+/* ===== 页面尺度(TeX measure,~75 字/行)===== */
+body{
+  max-width: 41rem;
+  margin: 2.5rem auto 5rem;
+  padding: 0 1.15rem;
+  font-size: 1.03rem;
+  line-height: 1.52;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+@media (max-width: 46rem){
+  body{ margin-top: 1.2rem; }
+}
+
+/* ===== 字体:西文衬线 + 中文宋体,贴近 Computer Modern 观感 ===== */
+body{
+  font-family: "Latin Modern Roman", "CMU Serif", "STIX Two Text",
+               "Songti SC", "STSong", "Noto Serif CJK SC", "SimSun",
+               Georgia, "Times New Roman", serif;
+}
+
+/* ===== 链接:内部编号引用无下划线,URL 保留下划线 ===== */
+a{ text-decoration: none; }
+a.url{ text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .14em; }
+
+/* ===== 标题块(center 环境)===== */
+div.center{ margin: 1.9rem 0 1.1rem; }
+div.center p{ margin: 0; }
+.center .ec-lmr-17{ font-weight: 700; font-size: 1.62em; letter-spacing: .01em; }
+
+/* ===== 章节标题:TeX article 的“加粗衬线、题目后短空”===== */
+h3.sectionHead{
+  font-size: 1.30em;
+  line-height: 1.3;
+  margin: 1.85em 0 .5em;
+  font-weight: 700;
+}
+h4.likesubsectionHead{
+  font-size: 1.05em;
+  font-style: italic;
+  font-weight: 700;
+  margin: 1.15em 0 .4em;
+}
+h3 .titlemark{ white-space: pre; margin-right: .25em; }
+
+/* ===== 段落:连续段落留小空隙,不做缩进 ===== */
+p{ margin-top: 0; margin-bottom: .55em; }
+p + p{ margin-top: .2em; }
+p.noindent{ text-indent: 0; }
+
+/* ===== 项目列表 ===== */
+ul.itemize1{ margin: .35em 0 .95em; padding-left: 2.1em; }
+li.itemize{ margin: .28em 0; }
+
+/* ===== 文献表:编号悬挂在左侧,不参与断行 ===== */
+dl.thebibliography{ margin: 0; }
+dt.thebibliography{
+  float: left;
+  clear: left;
+  width: 3em;
+  text-align: right;
+  margin-right: .75em;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: pre;
+}
+dd.thebibliography{
+  margin: 0 0 .62em 3.75em;
+  text-align: left;      /* 长条目不拉伸对齐 */
+  text-indent: 0;
+}
+dd.thebibliography p{ margin: 0; text-indent: 0; }
+dd.thebibliography a{ overflow-wrap: anywhere; word-break: break-all; }
+
+/* 长分类小节的间歇:每张表尾部加呼吸感 */
+dl.thebibliography::after{ content: ""; display: block; height: .35em; }

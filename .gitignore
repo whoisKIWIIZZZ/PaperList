@@ -6,7 +6,6 @@
 *.bcf
 *.4tc
 *.4ct
-*.css
 *.idv
 *.lg
 *.tmp
@@ -20,5 +19,5 @@ docs/
 *.blg
 *.dvi
 *.xdv
-paperlist.html
+/paperlist.css
 titletest.*

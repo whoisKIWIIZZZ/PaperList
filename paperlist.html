@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title></title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='paperlist.css' rel='stylesheet' type='text/css' /> 
+<meta content='paperlist.tex' name='src' /> 
+<script>window.MathJax = { tex: { tags: "ams", }, }; </script> 
+<script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
+</head><body>
+<div class='center'>
+<!-- l. 19 --><p class='noindent'>
+</p><!-- l. 20 --><p class='noindent'><span class='ec-lmr-17'>Paper Lists 文献列表</span><br />
+Yishou Zhuo<br />
+更新于 2026  10  24 </p></div>
+   
+   <h3 class='sectionHead' id='_'><span class='titlemark'>1   </span> <a id='x1-10001'></a>如何维护这个列表</h3>
+<!-- l. 27 --><p class='noindent'>每篇文献是一条 BibTeX 记录,都存在 <span class='ec-lmtt-10x-x-109'>refs.bib </span>里: </p>
+     <ul class='itemize1'>
+     <li class='itemize'><strong>新增</strong>:往 <span class='ec-lmtt-10x-x-109'>refs.bib </span>粘贴一条 BibTeX 条目(谷歌学术或 arXiv 都能导出);
+     </li>
+     <li class='itemize'><strong>分类</strong>:给条目写 <span class='ec-lmtt-10x-x-109'>keywords</span>,可多个——同一篇论文会自动出现在所有对应分类下;
+     </li>
+     <li class='itemize'><strong>引用</strong>:正文写 <span class='obeylines-h'><code class='verb'>\parencite{yao2023react}</code></span>,渲染成 “[3]” 这样的编号,点击跳到文末对应条目;
+     </li>
+     <li class='itemize'><strong>发布</strong>:<span class='ec-lmtt-10x-x-109'>git push  </span>后    GitHub    Actions    自动构建部署,不需要本地编译;    本地预览则运行
+     <span class='ec-lmtt-10x-x-109'>./build.sh</span>,打开 <span class='ec-lmtt-10x-x-109'>docs/paperlist.html</span>。</li></ul>
+   
+                                                                     
+
+                                                                     
+   <h3 class='sectionHead' id='agent'><span class='titlemark'>2   </span> <a id='x1-20002'></a>Agent</h3>
+<!-- l. 37 --><p class='noindent'>ReAct 让大模型在推理中交替“隐式思考”和“外部行动” [<a id='x1-2001'></a><a href='#cite.0_yao2023react'>3</a>]; Toolformer 则让模型自己学会在合适的位置调用工具
+[<a id='x1-2002'></a><a href='#cite.0_schick2023toolformer'>4</a>]。
+</p>
+   <h4 class='likesubsectionHead' id='agent-'><a id='x1-3000'></a>Agent 方法</h4>
+<!-- l. 39 --><p class='noindent'>
+    </p><dl class='thebibliography'><dt class='thebibliography' id='X0-yao2023react'>
+[3]  </dt><dd class='thebibliography' id='bib-1'>
+    <!-- l. 39 --><p class='noindent'><a id='cite.0_yao2023react'></a>Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik
+    Narasimhan,  and  Yuan  Cao.  “ReAct:  Synergizing  Reasoning  and
+    Acting in Language Models”. In: <span class='ec-lmri-10x-x-109'>International Conference on Learning
+    Representations</span>. 2023. <span class='small-caps'>url</span>: <a class='url' href='https://arxiv.org/abs/2210.03629'><span class='ec-lmtt-10x-x-109'>https://arxiv.org/abs/2210.03629</span></a>.
+    </p></dd><dt class='thebibliography' id='X0-schick2023toolformer'>
+[4]  </dt><dd class='thebibliography' id='bib-2'>
+    <!-- l. 39 --><p class='noindent'><a id='cite.0_schick2023toolformer'></a>Timo Schick, Jane Dwivedi-Yu, Roberto Dessì, Maria Lomeli, Luke
+    Zettlemoyer,  Nicola  Cancedda,  and  Thomas  Scialom.  “Toolformer:
+    Language   Models   Can   Teach   Themselves   to   Use   Tools”.   In:
+    <span class='ec-lmri-10x-x-109'>Advances  in  Neural  Information  Processing  Systems</span>.  2023.  <span class='small-caps'>url</span>:
+    <a class='url' href='https://arxiv.org/abs/2302.04761'><span class='ec-lmtt-10x-x-109'>https://arxiv.org/abs/2302.04761</span></a>.</p></dd></dl>
+   
+   <h3 class='sectionHead' id='rag'><span class='titlemark'>3   </span> <a id='x1-40003'></a>RAG</h3>
+<!-- l. 42 --><p class='noindent'>检索增强生成把外部知识库引入生成过程 [<a id='x1-4001'></a><a href='#cite.0_lewis2020rag'>5</a>]。
+                                                                     
+
+                                                                     
+</p>
+   <h4 class='likesubsectionHead' id='rag-'><a id='x1-5000'></a>RAG 论文</h4>
+<!-- l. 43 --><p class='noindent'>
+    </p><dl class='thebibliography'><dt class='thebibliography' id='X0-lewis2020rag'>
+[5]  </dt><dd class='thebibliography' id='bib-3'>
+    <!-- l. 43 --><p class='noindent'><a id='cite.0_lewis2020rag'></a>Patrick  Lewis,  Ethan  Perez,  Aleksandra  Piktus,  Fabio  Petroni,  et
+    al.  “Retrieval-Augmented  Generation  for  Knowledge-Intensive  NLP
+    Tasks”. In: <span class='ec-lmri-10x-x-109'>Advances in Neural Information Processing Systems</span>. 2020.
+    <span class='small-caps'>url</span>: <a class='url' href='https://arxiv.org/abs/2005.11401'><span class='ec-lmtt-10x-x-109'>https://arxiv.org/abs/2005.11401</span></a>.</p></dd></dl>
+   
+   <h3 class='sectionHead' id='_1'><span class='titlemark'>4   </span> <a id='x1-60004'></a>经典基础</h3>
+   
+   <h4 class='likesubsectionHead' id='_2'><a id='x1-7000'></a>必读经典</h4>
+<!-- l. 46 --><p class='noindent'>
+    </p><dl class='thebibliography'><dt class='thebibliography' id='X0-vaswani2017attention'>
+[1]  </dt><dd class='thebibliography' id='bib-4'>
+    <!-- l. 46 --><p class='noindent'><a id='cite.0_vaswani2017attention'></a>Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion
+    Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. “Attention
+    Is  All  You  Need”.  In:  <span class='ec-lmri-10x-x-109'>Advances  in  Neural  Information  Processing
+    Systems</span>. 2017. <span class='small-caps'>url</span>: <a class='url' href='https://arxiv.org/abs/1706.03762'><span class='ec-lmtt-10x-x-109'>https://arxiv.org/abs/1706.03762</span></a>.
+    </p></dd><dt class='thebibliography' id='X0-kaplan2020scaling'>
+[2]  </dt><dd class='thebibliography' id='bib-5'>
+    <!-- l. 46 --><p class='noindent'><a id='cite.0_kaplan2020scaling'></a>Jared  Kaplan,  Sam  McCandlish,  Tom  Henighan,  Tom  B  Brown,  et
+    al.  “Scaling  Laws  for  Neural  Language  Models”.  In:  <span class='ec-lmri-10x-x-109'>arXiv preprint
+    arXiv:2001.08361 </span>(2020). <span class='small-caps'>url</span>: <a class='url' href='https://arxiv.org/abs/2001.08361'><span class='ec-lmtt-10x-x-109'>https://arxiv.org/abs/2001.08361</span></a>.</p></dd></dl>
+                                                                     
+
+                                                                     
+   
+   <h3 class='sectionHead' id='scaling'><span class='titlemark'>5   </span> <a id='x1-80005'></a>Scaling</h3>
+<!-- l. 49 --><p class='noindent'>Scaling 经验律:模型规模、数据量与算力的权衡 [<a id='x1-8001'></a><a href='#cite.0_kaplan2020scaling'>2</a>]。
+</p>
+   <h4 class='likesubsectionHead' id='scaling-laws'><a id='x1-9000'></a>Scaling laws</h4>
+<!-- l. 50 --><p class='noindent'>
+    </p><dl class='thebibliography'><dt class='thebibliography' id='X0-kaplan2020scaling'>
+[2]  </dt><dd class='thebibliography' id='bib-6'>
+    <!-- l. 50 --><p class='noindent'>Jared  Kaplan,  Sam  McCandlish,  Tom  Henighan,  Tom  B  Brown,  et
+    al.  “Scaling  Laws  for  Neural  Language  Models”.  In:  <span class='ec-lmri-10x-x-109'>arXiv preprint
+    arXiv:2001.08361 </span>(2020). <span class='small-caps'>url</span>: <a class='url' href='https://arxiv.org/abs/2001.08361'><span class='ec-lmtt-10x-x-109'>https://arxiv.org/abs/2001.08361</span></a>.</p></dd></dl>
+   
+   <h3 class='sectionHead' id='_3'><span class='titlemark'>6   </span> <a id='x1-100006'></a>全部文献</h3>
+   
+   <h4 class='likesubsectionHead' id='_4'><a id='x1-11000'></a>按年份排序</h4>
+<!-- l. 53 --><p class='noindent'>
+    </p><dl class='thebibliography'><dt class='thebibliography' id='X0-vaswani2017attention'>
+[1]  </dt><dd class='thebibliography' id='bib-7'>
+    <!-- l. 53 --><p class='noindent'>Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion
+    Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. “Attention
+    Is  All  You  Need”.  In:  <span class='ec-lmri-10x-x-109'>Advances  in  Neural  Information  Processing
+    Systems</span>. 2017. <span class='small-caps'>url</span>: <a class='url' href='https://arxiv.org/abs/1706.03762'><span class='ec-lmtt-10x-x-109'>https://arxiv.org/abs/1706.03762</span></a>.
+                                                                     
+
+                                                                     
+    </p></dd><dt class='thebibliography' id='X0-kaplan2020scaling'>
+[2]  </dt><dd class='thebibliography' id='bib-8'>
+    <!-- l. 53 --><p class='noindent'>Jared  Kaplan,  Sam  McCandlish,  Tom  Henighan,  Tom  B  Brown,  et
+    al.  “Scaling  Laws  for  Neural  Language  Models”.  In:  <span class='ec-lmri-10x-x-109'>arXiv preprint
+    arXiv:2001.08361 </span>(2020). <span class='small-caps'>url</span>: <a class='url' href='https://arxiv.org/abs/2001.08361'><span class='ec-lmtt-10x-x-109'>https://arxiv.org/abs/2001.08361</span></a>.
+    </p></dd><dt class='thebibliography' id='X0-yao2023react'>
+[3]  </dt><dd class='thebibliography' id='bib-9'>
+    <!-- l. 53 --><p class='noindent'>Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik
+    Narasimhan,  and  Yuan  Cao.  “ReAct:  Synergizing  Reasoning  and
+    Acting in Language Models”. In: <span class='ec-lmri-10x-x-109'>International Conference on Learning
+    Representations</span>. 2023. <span class='small-caps'>url</span>: <a class='url' href='https://arxiv.org/abs/2210.03629'><span class='ec-lmtt-10x-x-109'>https://arxiv.org/abs/2210.03629</span></a>.
+    </p></dd><dt class='thebibliography' id='X0-schick2023toolformer'>
+[4]  </dt><dd class='thebibliography' id='bib-10'>
+    <!-- l. 53 --><p class='noindent'>Timo Schick, Jane Dwivedi-Yu, Roberto Dessì, Maria Lomeli, Luke
+    Zettlemoyer,  Nicola  Cancedda,  and  Thomas  Scialom.  “Toolformer:
+    Language   Models   Can   Teach   Themselves   to   Use   Tools”.   In:
+    <span class='ec-lmri-10x-x-109'>Advances  in  Neural  Information  Processing  Systems</span>.  2023.  <span class='small-caps'>url</span>:
+    <a class='url' href='https://arxiv.org/abs/2302.04761'><span class='ec-lmtt-10x-x-109'>https://arxiv.org/abs/2302.04761</span></a>.
+    </p></dd><dt class='thebibliography' id='X0-lewis2020rag'>
+[5]  </dt><dd class='thebibliography' id='bib-11'>
+    <!-- l. 53 --><p class='noindent'>Patrick  Lewis,  Ethan  Perez,  Aleksandra  Piktus,  Fabio  Petroni,  et
+    al.  “Retrieval-Augmented  Generation  for  Knowledge-Intensive  NLP
+    Tasks”. In: <span class='ec-lmri-10x-x-109'>Advances in Neural Information Processing Systems</span>. 2020.
+    <span class='small-caps'>url</span>: <a class='url' href='https://arxiv.org/abs/2005.11401'><span class='ec-lmtt-10x-x-109'>https://arxiv.org/abs/2005.11401</span></a>.</p></dd></dl>
+    
+</body> 
+</html>

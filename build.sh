@@ -11,6 +11,13 @@ mkdir -p docs
 # html5 = 语义化标签; mathjax = 公式保留 LaTeX 源码、浏览器内渲染(对数学标题最稳)
 make4ht -x paperlist.tex "html5,mathjax" -d docs 2>&1 | tail -3
 
+if [ ! -s docs/paperlist.html ]; then
+  echo "!! make4ht 没有产出 HTML,打印编译日志尾部:"
+  tail -40 paperlist.lg paperlist.xlg 2>/dev/null
+  exit 1
+fi
+echo "make4ht OK, $(sed -n 'p' docs/paperlist.html | wc -l) 行"
+
 # tex4ht 在未使用 \maketitle 时 <title> 是空的,补上(perl 写法 macOS/CI 皆可用)
 perl -pi -e 's|<title>[^<]*</title>|<title>Paper List 文献清单</title>|' docs/paperlist.html
 
