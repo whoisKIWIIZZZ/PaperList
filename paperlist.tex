@@ -1,0 +1,55 @@
+% 文献库主文档(中文模板)
+% 引擎必须用 XeLaTeX(中文);HTML 构建由 make4ht --engine xelatex 完成
+% 新增文献:refs.bib 加一条 entry + keywords 写分类标签,push 后网页自动更新
+\documentclass[11pt]{article}
+\usepackage[UTF8]{ctex}
+\usepackage[backend=biber, style=authoryear, sorting=ynt, maxbibnames=99]{biblatex}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+\addbibresource{refs.bib}
+
+% 关键:nocite 让未被正文引用过的条目也出现在各分类列表里
+\nocite{*}
+
+\title{Paper List 文献清单}
+\author{Yishou Zhuo}
+\date{\today}
+
+\begin{document}
+% \maketitle 会在 HTML 里丢失 xeCJK 中文(tex4ht 已知问题),改为手动标题页
+\begin{center}
+{\LARGE Paper Lists 文献列表}\\[0.6ex]
+{\normalsize Yishou Zhuo}\\[0.3ex]
+{\normalsize 更新于 \today}
+\end{center}
+
+
+\section{如何维护这个列表}
+每篇文献是一条 BibTeX 记录,都存在 \texttt{refs.bib} 里:
+\begin{itemize}
+\item \textbf{新增}:往 \texttt{refs.bib} 粘贴一条 BibTeX 条目(谷歌学术或 arXiv 都能导出);
+\item \textbf{分类}:给条目写 \texttt{keywords},可多个——同一篇论文会自动出现在所有对应分类下;
+\item \textbf{引用}:正文写 \verb|\parencite{yao2023react}|,即“Yao 等 (2023)”,并链接到下方条目;
+\item \textbf{发布}:\texttt{git push} 后 GitHub Actions 自动构建部署,不需要本地编译;
+本地预览则运行 \texttt{./build.sh},打开 \texttt{docs/paperlist.html}。
+\end{itemize}
+
+\section{Agent}
+ReAct 让大模型在推理中交替“隐式思考”和“外部行动” \parencite{yao2023react};
+Toolformer 则让模型自己学会在合适的位置调用工具 \parencite{schick2023toolformer}。
+\printbibliography[keyword=agent, heading=subbibliography, title={Agent 方法}]
+
+\section{RAG}
+检索增强生成把外部知识库引入生成过程 \parencite{lewis2020rag}。
+\printbibliography[keyword=rag, heading=subbibliography, title={RAG 论文}]
+
+\section{经典基础}
+\printbibliography[keyword=classic, heading=subbibliography, title={必读经典}]
+
+\section{Scaling}
+Scaling 经验律:模型规模、数据量与算力的权衡 \parencite{kaplan2020scaling}。
+\printbibliography[keyword=scaling, heading=subbibliography, title={Scaling laws}]
+
+\section{全部文献}
+\printbibliography[heading=subbibliography, title={按年份排序}]
+
+\end{document}

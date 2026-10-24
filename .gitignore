@@ -1,0 +1,24 @@
+# 编译中间产物,不进 git
+*.aux
+*.log
+*.run.xml
+*.bbl
+*.bcf
+*.4tc
+*.4ct
+*.css
+*.idv
+*.lg
+*.tmp
+*.xref
+*.out
+*.og
+latexmk
+# docs/ 由 CI 自动构建,GitHub Pages 从 workflow artifact 部署
+docs/
+# 更多 make4ht / 测试中间产物
+*.blg
+*.dvi
+*.xdv
+paperlist.html
+titletest.*

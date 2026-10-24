@@ -1,0 +1,6 @@
+-- make4ht 构建文件:自动被 make4ht 『tex文件名.mk4』加载
+-- 顺序:编译 -> biber(解析 refs.bib)-> 再编译两次以填好所有交叉引用
+Make:htlatex {}
+Make:biber {}
+Make:htlatex {}
+Make:htlatex {}
