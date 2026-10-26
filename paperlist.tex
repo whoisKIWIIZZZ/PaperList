@@ -3,9 +3,18 @@
 % 新增文献:refs.bib 加一条 entry + keywords 写分类标签,push 后网页自动更新
 % 版式仿 NeurIPS 模板:Times 字体、5.5in 正文宽、标题上粗下细两条线、绿色引用编号
 % arXiv 号不用手写 BibTeX:正文直接写号,运行 python3 scripts/arxiv2bib.py 自动换成 \cite
-\documentclass[10pt,letterpaper]{article}
+% 注意:类必须用 article + ctex 包(scheme=plain)——ctexart 类在 tex4ht 下与 biblatex 不兼容
+% (ctexart.4ht 钩子会干扰 biblatex 读 .bbl,报 Missing \begin{document} 级联 -> Emergency stop);
+% HTML 的版面由 css/theme.css 负责,不要把字号放到类选项里
+\documentclass[10pt]{article}
 \usepackage[UTF8, scheme=plain]{ctex}
-\setmainfont{TeX Gyre Termes}  % Times 克隆,即参考 PDF 里的 Nimbus Roman
+\usepackage[margin=2cm,a4paper]{geometry}
+% fontspec 在 tex4ht(make4ht)的 HTML 构建下不会被加载,\setmainfont 会未定义,
+% 故字体设置放在 PDF 路径内
+\ifdefined\HCode\else
+  \setmainfont{Caladea}
+  %\setmainfont{TeX Gyre Termes}  % Times 克隆,即参考 PDF 里的 Nimbus Roman
+\fi
 \usepackage[backend=biber, style=numeric, sorting=none, maxbibnames=99,
             giveninits=false, uniquename=false, doi=false, isbn=false,
             url=false, eprint=false]{biblatex}
@@ -19,26 +28,26 @@
 \DeclareFieldFormat{booktitle}{\iffieldundef{url}{\mkbibemph{#1}}{\href{\thefield{url}}{\mkbibemph{#1}}}}
 \renewbibmacro*{issue+date}{\setunit{\addcomma\space}\usebibmacro{date}\newunit}
 
-\ifdefined\HCode\else
-  % 以下只作用于 PDF(HTML 版面由 css/theme.css 负责)
-  \usepackage[letterpaper, textwidth=5.5in, textheight=9in, top=1in]{geometry}
-  \usepackage{titlesec}
-  \titleformat{\section}{\large\bfseries\raggedright}{\thesection}{1em}{}
-  \titleformat{\subsection}{\normalsize\bfseries\raggedright}{\thesubsection}{1em}{}
-  \titlespacing*{\section}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
-  \titlespacing*{\subsection}{0pt}{10pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
-  \setlength{\parindent}{0pt}
-  \setlength{\parskip}{5.5pt plus 1pt}
-  \makeatletter
-  \renewcommand{\@maketitle}{%
-    \vbox{\hsize\textwidth\linewidth\hsize\vskip 0.1in
-      \hrule height 4pt\vskip 0.25in
-      \centering{\LARGE\bfseries\@title\par}\vskip 0.29in
-      \hrule height 1pt\vskip 0.15in
-      {\normalsize\@author\quad\@date\par}}%
-    \vskip 0.3in}
-  \makeatother
-\fi
+% \ifdefined\HCode\else
+%   % 以下只作用于 PDF(HTML 版面由 css/theme.css 负责)
+%   \usepackage[letterpaper, textwidth=5.5in, textheight=9in, top=1in]{geometry}
+%   \usepackage{titlesec}
+%   \titleformat{\section}{\large\bfseries\raggedright}{\thesection}{1em}{}
+%   \titleformat{\subsection}{\normalsize\bfseries\raggedright}{\thesubsection}{1em}{}
+%   \titlespacing*{\section}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
+%   \titlespacing*{\subsection}{0pt}{10pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
+%   \setlength{\parindent}{0pt}
+%   \setlength{\parskip}{5.5pt plus 1pt}
+%   \makeatletter
+%   \renewcommand{\@maketitle}{%
+%     \vbox{\hsize\textwidth\linewidth\hsize\vskip 0.1in
+%       \hrule height 4pt\vskip 0.25in
+%       \centering{\LARGE\bfseries\@title\par}\vskip 0.29in
+%       \hrule height 1pt\vskip 0.15in
+%       {\normalsize\@author\quad\@date\par}}%
+%     \vskip 0.3in}
+%   \makeatother
+% \fi
 
 \title{Paper List}
 \author{whoisKIWIIZZZ}
@@ -87,6 +96,8 @@ I think that JEPA also helps for building a 'good' representations of model pred
     \item \cite{zhang2026imagewam}, predict future
     \item \cite{chen2026flowwam}, use optical-flow. \textit{TODO:add lfy's work}
     \item \cite{wang2026beyond}, just denoising w/o predict future
+    \item \cite{xie2026sensorimotor}, statistical work to analyze ACTION SPACE
+    \item \cite{baek2026learning,liu2026physical}, atom ops of action
 \end{itemize}
 \subsection{Others}
 \begin{itemize}
@@ -133,25 +144,8 @@ I think that JEPA also helps for building a 'good' representations of model pred
         \item \cite{zhang2026identifiability}, decode state of WMs to identify
     \end{itemize}
     \item \cite{tropp2010userfriendly}, random matrixs
+    \item \cite{hardt2016identity}, Identity in ResNet.Tengyu Ma play
 \end{itemize}
-% \section{Agent}
-% ReAct 让大模型在推理中交替“隐式思考”和“外部行动” \parencite{yao2023react};
-% Toolformer 则让模型自己学会在合适的位置调用工具 \parencite{schick2023toolformer}。
-% \printbibliography[keyword=agent, heading=subbibliography, title={Agent 方法}]
-
-% \section{RAG}
-% 检索增强生成把外部知识库引入生成过程 \parencite{lewis2020rag}。
-% \printbibliography[keyword=rag, heading=subbibliography, title={RAG 论文}]
-
-% \section{经典基础}
-% \printbibliography[keyword=classic, heading=subbibliography, title={必读经典}]
-
-% \section{Scaling}
-% Scaling 经验律:模型规模、数据量与算力的权衡 \parencite{kaplan2020scaling}。
-% \printbibliography[keyword=scaling, heading=subbibliography, title={Scaling laws}]
-
-% \section{全部文献}
-% \printbibliography[heading=subbibliography, title={按年份排序}]
 
 \printbibliography[title=References]
 

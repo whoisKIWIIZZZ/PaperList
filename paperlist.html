@@ -1,0 +1,374 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>Paper List</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='paperlist.css' rel='stylesheet' type='text/css' /> 
+<meta content='paperlist.tex' name='src' /> 
+<script>window.MathJax = { tex: { tags: "ams", }, }; </script> 
+<script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
+</head><body>
+   <div class='maketitle'>
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            
+
+<h2 class='titleHead'>Paper List</h2>
+ <div class='author'><span class='ec-lmr-12'>whoisKIWIIZZZ</span></div><br />
+<div class='date'><span class='ec-lmr-12'>October 26, 2026</span></div>
+   </div>
+   <section class='abstract' role='doc-abstract'> 
+<h3 class='abstracttitle'>
+<span class='ec-lmbx-9'>Abstract</span>
+</h3>
+
+     <!-- l. 76 --><p class='noindent'><span class='ec-lmr-9'>整理一系列文章为了后续能快速的找到内容.</span>
+</p>
+</section>
+   
+   <h3 class='sectionHead' id='world-model'><span class='titlemark'>1   </span> <a id='x1-10001'></a>World Model</h3>
+   
+   <h4 class='subsectionHead' id='jepas'><span class='titlemark'>1.1   </span> <a id='x1-20001.1'></a>JEPAs</h4>
+<!-- l. 80 --><p class='noindent'>Training object is (likely) representations, and use CEM to MPC. </p>
+     <ul class='itemize1'>
+     <li class='itemize'>I-JEPA,V-JEPA [<a id='x1-2001'></a><a href='#cite.0_assran2025vjepa'>1</a>, <a id='x1-2002'></a><a href='#cite.0_chen2025vljepa'>2</a>, <a id='x1-2003'></a><a href='#cite.0_bardes2024revisiting'>3</a>, <a id='x1-2004'></a><a href='#cite.0_assran2023selfsupervised'>4</a>, <a id='x1-2005'></a><a href='#cite.0_murlabadia2026vjepa'>5</a>]
+     </li>
+     <li class='itemize'>leWM-based [<a id='x1-2006'></a><a href='#cite.0_maes2026leworldmodel'>6</a>, <a id='x1-2007'></a><a href='#cite.0_klindt2026when'>7</a>, <a id='x1-2008'></a><a href='#cite.0_wang2026adajepa'>8</a>],
+     </li>
+     <li class='itemize'>DINO-WM [<a id='x1-2009'></a><a href='#cite.0_zhou2024dinowm'>9</a>]
+     </li>
+     <li class='itemize'>[<a id='x1-2010'></a><a href='#cite.0_zhang2026hierarchical'>10</a>], Hierarchical planning</li></ul>
+
+   <h4 class='subsectionHead' id='latent-representations'><span class='titlemark'>1.2   </span> <a id='x1-30001.2'></a>latent representations</h4>
+<!-- l. 88 --><p class='noindent'>I think that JEPA also helps for building a ’good’ representations of model prediction. Here are works that focusing on
+training the encoder instead of just next-step prediction. </p>
+     <ul class='itemize1'>
+     <li class='itemize'>[<a id='x1-3001'></a><a href='#cite.0_wang2026temporal'>11</a>], smoothness for representations
+                                                                                            
+                                                                                            
+     </li>
+     <li class='itemize'>[<a id='x1-3002'></a><a href='#cite.0_liu2026odeworld'>12</a>], project DINO token
+     </li>
+     <li class='itemize'><i>[<a id='x1-3003'></a><a href='#cite.0_yuan2026representation'>13</a>], planning in latent</i></li></ul>
+
+   <h4 class='subsectionHead' id='wams'><span class='titlemark'>1.3   </span> <a id='x1-40001.3'></a>WAMs</h4>
+     <ul class='itemize1'>
+     <li class='itemize'>[<a id='x1-4001'></a><a href='#cite.0_zhang2026imagewam'>14</a>], predict future
+     </li>
+     <li class='itemize'>[<a id='x1-4002'></a><a href='#cite.0_chen2026flowwam'>15</a>], use optical-flow. <i>TODO:add lfy’s work</i>
+     </li>
+     <li class='itemize'>[<a id='x1-4003'></a><a href='#cite.0_wang2026beyond'>16</a>], just denoising w/o predict future
+     </li>
+     <li class='itemize'>[<a id='x1-4004'></a><a href='#cite.0_xie2026sensorimotor'>17</a>], statistical work to analyze ACTION SPACE
+     </li>
+     <li class='itemize'>[<a id='x1-4005'></a><a href='#cite.0_baek2026learning'>18</a>, <a id='x1-4006'></a><a href='#cite.0_liu2026physical'>19</a>], atom ops of action</li></ul>
+
+   <h4 class='subsectionHead' id='others'><span class='titlemark'>1.4   </span> <a id='x1-50001.4'></a>Others</h4>
+     <ul class='itemize1'>
+     <li class='itemize'>[<a id='x1-5001'></a><a href='#cite.0_daniel2026latent'>20</a>],Point WMs
+     </li>
+     <li class='itemize'>[<a id='x1-5002'></a><a href='#cite.0_nam2026anygoal'>21</a>], dataset for other goals
+     </li>
+     <li class='itemize'>[<a id='x1-5003'></a><a href='#cite.0_guo2026scaling'>22</a>], testing on Video-gen
+     </li>
+     <li class='itemize'>[<a id='x1-5004'></a><a href='#cite.0_liu2026odeworld'>12</a>], use ODE as training objective
+     </li>
+     <li class='itemize'>[<a id='x1-5005'></a><a href='#cite.0_huang2026nano'>23</a>], good pipeline on WM
+                                                                                            
+                                                                                            
+     </li>
+     <li class='itemize'>[<a id='x1-5006'></a><a href='#cite.0_liu2026reasoning'>24</a>, <a id='x1-5007'></a><a href='#cite.0_hu2025arc'>25</a>], ARC-AGI (idk where to put it)
+     </li>
+     <li class='itemize'>[<a id='x1-5008'></a><a href='#cite.0_vafa2025what'>26</a>], Probe to find whether WM can find the original laws(e.g.,gravity)</li></ul>
+
+   <h3 class='sectionHead' id='loop'><span class='titlemark'>2   </span> <a id='x1-60002'></a>Loop</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>[<a id='x1-6001'></a><a href='#cite.0_shu2026loopvit'>27</a>],LoopViT
+     </li>
+     <li class='itemize'>[<a id='x1-6002'></a><a href='#cite.0_jacobs2025blockrecurrent'>28</a>], use DP to find training-free loops in ViTs
+     </li>
+     <li class='itemize'>[<a id='x1-6003'></a><a href='#cite.0_goyal2026elt'>29</a>], refine in Diffusion
+     </li>
+     <li class='itemize'>[<a id='x1-6004'></a><a href='#cite.0_chng2026looped'>30</a>], LoopDiT
+     </li>
+     <li class='itemize'>[<a id='x1-6005'></a><a href='#cite.0_lu2026looped'>31</a>], LoopWM</li></ul>
+
+   <h3 class='sectionHead' id='nca'><span class='titlemark'>3   </span> <a id='x1-70003'></a>NCA</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>[<a id='x1-7001'></a><a href='#cite.0_spitznagel2026new'>32</a>], Summary
+     </li>
+     <li class='itemize'>[<a id='x1-7002'></a><a href='#cite.0_drozdova2026diffusion'>33</a>], Diffusion as NCA
+     </li>
+     <li class='itemize'>[<a id='x1-7003'></a><a href='#cite.0_spitznagel20262d'>34</a>, <a id='x1-7004'></a><a href='#cite.0_etcheverry2026reasoning'>35</a>], 2D reasoning w/ NCA
+     </li>
+     <li class='itemize'>
+     <!-- l. 125 --><p class='noindent'>Yitao Xu<span class='footnote-mark'><a href='#fn1x0' id='fn1x0-bk'><sup class='textsuperscript'>1</sup></a></span><a id='x1-7005f1'></a>’s
+     prior work: </p>
+         <ul class='itemize2'>
+         <li class='itemize'>Growing NCA [<a id='x1-7007'></a><a href='#cite.0_mordvintsev2020growing'>36</a>], the original NCA
+                                                                                            
+                                                                                            
+         </li>
+         <li class='itemize'>DyNCA [<a id='x1-7008'></a><a href='#cite.0_pajouheshgar2023dynca'>37</a>], dynamic texture synthesis by motion supervision
+         </li>
+         <li class='itemize'>MeshNCA [<a id='x1-7009'></a><a href='#cite.0_pajouheshgar2024meshnca'>38</a>], texture synthesis on meshes
+         </li>
+         <li class='itemize'>[<a id='x1-7010'></a><a href='#cite.0_pajouheshgar2025neural'>39</a>], NCA + appearance decoder, from cells to high-res pixels
+         </li>
+         <li class='itemize'>NoiseNCA [<a id='x1-7011'></a><a href='#cite.0_pajouheshgar2024noisenca'>40</a>], noisy seed for spatio-temporal continuity
+         </li>
+         <li class='itemize'>[<a id='x1-7012'></a><a href='#cite.0_kim2026neural'>41</a>], Neural Particle Automata</li></ul>
+     </li></ul>
+
+   <h3 class='sectionHead' id='theory'><span class='titlemark'>4   </span> <a id='x1-80004'></a>Theory</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>[<a id='x1-8001'></a><a href='#cite.0_kumar2022finetuning'>42</a>],question ID/OOD acc using <strong>gradient flow</strong>. Check if u wish to see analyses of subspace
+     </li>
+     <li class='itemize'>[<a id='x1-8002'></a><a href='#cite.0_papadopoulos2024arrows'>43</a>],great work of "capacity" of models<span class='footnote-mark'><a href='#fn2x0' id='fn2x0-bk'><sup class='textsuperscript'>2</sup></a></span><a id='x1-8003f2'></a>
+     </li>
+     <li class='itemize'>
+     <!-- l. 139 --><p class='noindent'>several works of JEPAs. </p>
+         <ul class='itemize2'>
+         <li class='itemize'>[<a id='x1-8005'></a><a href='#cite.0_klindt2026when'>7</a>],Gaussian world, how SIGReg work ?
+         </li>
+         <li class='itemize'>[<a id='x1-8006'></a><a href='#cite.0_kuang2026lpwm'>44</a>], LpWM , sprase-space analysis
+         </li>
+         <li class='itemize'>[<a id='x1-8007'></a><a href='#cite.0_wang2026temporal'>11</a>], smoothness for representations
+         </li>
+         <li class='itemize'>[<a id='x1-8008'></a><a href='#cite.0_zhang2026identifiability'>45</a>], decode state of WMs to identify</li></ul>
+     </li>
+     <li class='itemize'>[<a id='x1-8009'></a><a href='#cite.0_tropp2010userfriendly'>46</a>], random matrixs
+     </li>
+     <li class='itemize'>[<a id='x1-8010'></a><a href='#cite.0_hardt2016identity'>47</a>], Identity in ResNet.Tengyu Ma play</li></ul>
+   
+                                                                                            
+                                                                                            
+   <h3 class='sectionHead' id='references'><a id='x1-9000'></a>References</h3>
+<!-- l. 150 --><p class='noindent'>
+     </p><dl class='thebibliography'><dt class='thebibliography' id='X0-assran2025vjepa'>
+ [1]  </dt><dd class='thebibliography' id='bib-1'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_assran2025vjepa'></a>Mido Assran, Adrien Bardes, David Fan, Quentin Garrido, Russell Howes, Mojtaba, Komeili, Matthew
+     Muckley,  Ammar  Rizvi,  Claire  Roberts,  Koustuv  Sinha,  Artem  Zholus,  Sergio  Arnaud,  Abha  Gejji,
+     Ada Martin, Francois Robert Hogan, Daniel Dugas, Piotr Bojanowski, Vasil Khalidov, Patrick Labatut,
+     Francisco  Massa,  Marc  Szafraniec,  Kapil  Krishnakumar,  Yong  Li,  Xiaodong  Ma,  Sarath  Chandar,
+     Franziska Meier, Yann LeCun, Michael Rabbat, and Nicolas Ballas. V-JEPA 2: Self-Supervised Video
+     Models Enable Understanding, Prediction and Planning.  <a href='https://arxiv.org/abs/2506.09985'><span class='ec-lmri-10'>arXiv preprint arXiv:2506.09985</span></a>, 2025.
+     </p></dd><dt class='thebibliography' id='X0-chen2025vljepa'>
+ [2]  </dt><dd class='thebibliography' id='bib-2'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_chen2025vljepa'></a>Delong Chen, Mustafa Shukor, Theo Moutakanni, Willy Chung, Jade Yu, Tejaswi Kasarla, Yejin Bang,
+     Allen Bolourchi, Yann LeCun, and Pascale Fung. VL-JEPA: Joint Embedding Predictive Architecture for
+     Vision-language.  <a href='https://arxiv.org/abs/2512.10942'><span class='ec-lmri-10'>arXiv preprint arXiv:2512.10942</span></a>, 2025.
+     </p></dd><dt class='thebibliography' id='X0-bardes2024revisiting'>
+ [3]  </dt><dd class='thebibliography' id='bib-3'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_bardes2024revisiting'></a>Adrien Bardes, Quentin Garrido, Jean Ponce, Xinlei Chen, Michael Rabbat, Yann LeCun, Mahmoud
+     Assran, and Nicolas Ballas. Revisiting Feature Prediction for Learning Visual Representations from Video.
+     <a href='https://arxiv.org/abs/2404.08471'><span class='ec-lmri-10'>arXiv preprint arXiv:2404.08471</span></a>, 2024.
+     </p></dd><dt class='thebibliography' id='X0-assran2023selfsupervised'>
+ [4]  </dt><dd class='thebibliography' id='bib-4'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_assran2023selfsupervised'></a>Mahmoud Assran, Quentin Duval, Ishan Misra, Piotr Bojanowski, Pascal Vincent, Michael Rabbat, Yann
+     LeCun, and Nicolas Ballas. Self-Supervised Learning from Images with a Joint-Embedding Predictive
+     Architecture.  <a href='https://arxiv.org/abs/2301.08243'><span class='ec-lmri-10'>arXiv preprint arXiv:2301.08243</span></a>, 2023.
+     </p></dd><dt class='thebibliography' id='X0-murlabadia2026vjepa'>
+ [5]  </dt><dd class='thebibliography' id='bib-5'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_murlabadia2026vjepa'></a>Lorenzo  Mur-Labadia,  Matthew  Muckley,  Amir  Bar,  Mido  Assran,  Koustuv  Sinha,  Mike  Rabbat,
+     Yann  LeCun,  Nicolas  Ballas,  and  Adrien  Bardes.  V-JEPA  2.1:  Unlocking  Dense  Features  in  Video
+     Self-Supervised Learning.  <a href='https://arxiv.org/abs/2603.14482'><span class='ec-lmri-10'>arXiv preprint arXiv:2603.14482</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-maes2026leworldmodel'>
+ [6]  </dt><dd class='thebibliography' id='bib-6'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_maes2026leworldmodel'></a>Lucas   Maes,   Quentin   Le   Lidec,   Damien   Scieur,   Yann   LeCun,   and   Randall   Balestriero.
+     LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels.  <a href='https://arxiv.org/abs/2603.19312'><span class='ec-lmri-10'>arXiv preprint
+     arXiv:2603.19312</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-klindt2026when'>
+ [7]  </dt><dd class='thebibliography' id='bib-7'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_klindt2026when'></a>David Klindt, Yann LeCun, and Randall Balestriero. When Does LeJEPA Learn a World Model?  <a href='https://arxiv.org/abs/2605.26379'><span class='ec-lmri-10'>arXiv
+     preprint arXiv:2605.26379</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-wang2026adajepa'>
+ [8]  </dt><dd class='thebibliography' id='bib-8'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_wang2026adajepa'></a>Ying Wang, Oumayma Bounou, Yann LeCun, and Mengye Ren. AdaJEPA: An Adaptive Latent World
+     Model.  <a href='https://arxiv.org/abs/2606.32026'><span class='ec-lmri-10'>arXiv preprint arXiv:2606.32026</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-zhou2024dinowm'>
+ [9]  </dt><dd class='thebibliography' id='bib-9'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_zhou2024dinowm'></a>Gaoyue Zhou, Hengkai Pan, Yann LeCun, and Lerrel Pinto. DINO-WM: World Models on Pre-trained
+     Visual Features enable Zero-shot Planning.  <a href='https://arxiv.org/abs/2411.04983'><span class='ec-lmri-10'>arXiv preprint arXiv:2411.04983</span></a>, 2024.
+     </p></dd><dt class='thebibliography' id='X0-zhang2026hierarchical'>
+[10]  </dt><dd class='thebibliography' id='bib-10'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_zhang2026hierarchical'></a>Wancong Zhang, Basile Terver, Artem Zholus, Soham Chitnis, Harsh Sutaria, Mido Assran, Randall
+     Balestriero, Amir Bar, Yann LeCun, and Nicolas Ballas. Hierarchical Planning with Latent World Models.
+     <a href='https://arxiv.org/abs/2604.03208'><span class='ec-lmri-10'>arXiv preprint arXiv:2604.03208</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-wang2026temporal'>
+[11]  </dt><dd class='thebibliography' id='bib-11'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_wang2026temporal'></a>Ying Wang, Oumayma Bounou, Gaoyue Zhou, Randall Balestriero, Tim G. J. Rudner, Yann LeCun, and
+     Mengye Ren. Temporal Straightening for Latent Planning.  <a href='https://arxiv.org/abs/2603.12231'><span class='ec-lmri-10'>arXiv preprint arXiv:2603.12231</span></a>, 2026.
+                                                                                            
+                                                                                            
+     </p></dd><dt class='thebibliography' id='X0-liu2026odeworld'>
+[12]  </dt><dd class='thebibliography' id='bib-12'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_liu2026odeworld'></a>Dongxiu  Liu,  Haoyi  Niu,  Peng  Cheng,  Yuan  Gao,  Xirui  Kang,  Sangli  Teng,  Koushil  Sreenath,  and
+     Xianyuan  Zhan.  ODEWorld:  A  Continuous  Predictive  Architecture  via  Physical-Time  Flow.   <a href='https://arxiv.org/abs/2607.27924'><span class='ec-lmri-10'>arXiv
+     preprint arXiv:2607.27924</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-yuan2026representation'>
+[13]  </dt><dd class='thebibliography' id='bib-13'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_yuan2026representation'></a>Yijun  Yuan,  Weicheng  Zheng,  Weibang  Wang,  Minghui  Qin,  Chang  Sun,  Junhao  Huang,  Kenan  Li,
+     Anmin Liu, Yicheng Yao, and Hang Zhao. Representation World Model: Learning States, Transition and
+     Executable Plans in Representation.  <a href='https://arxiv.org/abs/2609.29171'><span class='ec-lmri-10'>arXiv preprint arXiv:2609.29171</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-zhang2026imagewam'>
+[14]  </dt><dd class='thebibliography' id='bib-14'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_zhang2026imagewam'></a>Yuyang Zhang, Wenyao Zhang, Zekun Qi, He Zhang, Haitao Lin, Jingbo Zhang, Yao Mu, Xiaokang Yang,
+     Wenjun Zeng, and Xin Jin. ImageWAM: Do World Action Models Really Need Video Generation, or Just
+     Image Editing?  <a href='https://arxiv.org/abs/2606.19531'><span class='ec-lmri-10'>arXiv preprint arXiv:2606.19531</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-chen2026flowwam'>
+[15]  </dt><dd class='thebibliography' id='bib-15'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_chen2026flowwam'></a>Yixiang Chen, Peiyan Li, Yuan Xu, Qisen Ma, Jiabing Yang, Kai Wang, Jianhua Yang, Dong An, He
+     Guan,  Gaoteng  Liu,  Jianlou  Si,  Jun  Huang,  Jing  Liu,  Nianfeng  Liu,  Yan  Huang,  and  Liang  Wang.
+     FlowWAM: Optical Flow as a Unified Action Representation for World Action Models.  <a href='https://arxiv.org/abs/2607.13017'><span class='ec-lmri-10'>arXiv preprint
+     arXiv:2607.13017</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-wang2026beyond'>
+[16]  </dt><dd class='thebibliography' id='bib-16'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_wang2026beyond'></a>Zanyi Wang, Yuheng Lei, Dengyang Jiang, Ping Luo, Mengdi Wang, Zhixuan Liang, and Shilong Liu.
+     Beyond  Future  Prediction:  Denoising  as  Generative  Adaptation  for  Robot  Control.   <a href='https://arxiv.org/abs/2609.28339'><span class='ec-lmri-10'>arXiv  preprint
+     arXiv:2609.28339</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-xie2026sensorimotor'>
+[17]  </dt><dd class='thebibliography' id='bib-17'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_xie2026sensorimotor'></a>Yunfei Xie, Howard H. Qian, Shiyi Lan, Kaiyu Hang, and Chen Wei. Sensorimotor Alignment: A Platonic
+     Proxy for Embodied Policy Success.  <a href='https://arxiv.org/abs/2610.31670'><span class='ec-lmri-10'>arXiv preprint arXiv:2610.31670</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-baek2026learning'>
+[18]  </dt><dd class='thebibliography' id='bib-18'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_baek2026learning'></a>Doojin Baek, Gyubin Lee, Junyeob Baek, Hosung Lee, and Sungjin Ahn. Learning to Theorize the World
+     from Observation.  <a href='https://arxiv.org/abs/2605.03413'><span class='ec-lmri-10'>arXiv preprint arXiv:2605.03413</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-liu2026physical'>
+[19]  </dt><dd class='thebibliography' id='bib-19'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_liu2026physical'></a>Jiaming Liu, Xinghao Zhu, Yiming Zhang, Shanghang Zhang, Yinxi Wang, Yichu Yang, Zhuoyang Liu,
+     Dantong Niu, Soha Pouya, Juekun Li, and Yan Chang. Physical Words: A Vocabulary for Structuring
+     Latent Reasoning in Robot Manipulation.  <a href='https://arxiv.org/abs/2610.26854'><span class='ec-lmri-10'>arXiv preprint arXiv:2610.26854</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-daniel2026latent'>
+[20]  </dt><dd class='thebibliography' id='bib-20'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_daniel2026latent'></a>Tal Daniel, Carl Qi, Dan Haramati, Amir Zadeh, Chuan Li, Aviv Tamar, Deepak Pathak, and David
+     Held. Latent Particle World Models: Self-supervised Object-centric Stochastic Dynamics Modeling.  <a href='https://arxiv.org/abs/2603.04553'><span class='ec-lmri-10'>arXiv
+     preprint arXiv:2603.04553</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-nam2026anygoal'>
+[21]  </dt><dd class='thebibliography' id='bib-21'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_nam2026anygoal'></a>Heejeong Nam, Divyat Mahajan, Quentin Le Lidec, Randall Balestriero, and David Klindt. AnyGoal: On
+     World Model Generalization Beyond Expert Rollouts.  <a href='https://arxiv.org/abs/2610.26844'><span class='ec-lmri-10'>arXiv preprint arXiv:2610.26844</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-guo2026scaling'>
+[22]  </dt><dd class='thebibliography' id='bib-22'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_guo2026scaling'></a>Weihang Guo, Xiaoyu Wu, Yifei Wang, Niloofar Mireshghallah, and Lydia E. Kavraki. Scaling Video
+     Generation for Reasoning: At What Cost?  <a href='https://arxiv.org/abs/2609.36599'><span class='ec-lmri-10'>arXiv preprint arXiv:2609.36599</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-huang2026nano'>
+[23]  </dt><dd class='thebibliography' id='bib-23'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_huang2026nano'></a>Siqiao Huang, Partha Kaushik, Michael Chen, Hengkai Pan, Kaiwen Geng, Omar Chehab, Fernando
+     Moreno-Pino, and Max Simchowitz. Nano World Models: A Minimalist Implementation of Future Video
+     Prediction.  <a href='https://arxiv.org/abs/2605.23993'><span class='ec-lmri-10'>arXiv preprint arXiv:2605.23993</span></a>, 2026.
+                                                                                            
+                                                                                            
+     </p></dd><dt class='thebibliography' id='X0-liu2026reasoning'>
+[24]  </dt><dd class='thebibliography' id='bib-24'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_liu2026reasoning'></a>Zhiguang Liu and Yi Shang. Reasoning is a Modality.  <a href='https://arxiv.org/abs/2601.13562'><span class='ec-lmri-10'>arXiv preprint arXiv:2601.13562</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-hu2025arc'>
+[25]  </dt><dd class='thebibliography' id='bib-25'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_hu2025arc'></a>Keya Hu, Ali Cy, Linlu Qiu, Xiaoman Delores Ding, Runqian Wang, Yeyin Eva Zhu, Jacob Andreas, and
+     Kaiming He. ARC Is a Vision Problem!  <a href='https://arxiv.org/abs/2511.14761'><span class='ec-lmri-10'>arXiv preprint arXiv:2511.14761</span></a>, 2025.
+     </p></dd><dt class='thebibliography' id='X0-vafa2025what'>
+[26]  </dt><dd class='thebibliography' id='bib-26'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_vafa2025what'></a>Keyon Vafa, Peter G. Chang, Ashesh Rambachan, and Sendhil Mullainathan. What Has a Foundation
+     Model Found? Using Inductive Bias to Probe for World Models.  <a href='https://arxiv.org/abs/2507.06952'><span class='ec-lmri-10'>arXiv preprint arXiv:2507.06952</span></a>, 2025.
+     </p></dd><dt class='thebibliography' id='X0-shu2026loopvit'>
+[27]  </dt><dd class='thebibliography' id='bib-27'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_shu2026loopvit'></a>Wen-Jie Shu, Xuerui Qiu, Rui-Jie Zhu, Harold Haodong Chen, Yexin Liu, and Harry Yang. LoopViT:
+     Scaling Visual ARC with Looped Transformers.  <a href='https://arxiv.org/abs/2602.02156'><span class='ec-lmri-10'>arXiv preprint arXiv:2602.02156</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-jacobs2025blockrecurrent'>
+[28]  </dt><dd class='thebibliography' id='bib-28'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_jacobs2025blockrecurrent'></a>Mozes Jacobs, Thomas Fel, Richard Hakim, Alessandra Brondetta, Demba Ba, and T. Andy Keller.
+     Block-Recurrent Dynamics in Vision Transformers.  <a href='https://arxiv.org/abs/2512.19941'><span class='ec-lmri-10'>arXiv preprint arXiv:2512.19941</span></a>, 2025.
+     </p></dd><dt class='thebibliography' id='X0-goyal2026elt'>
+[29]  </dt><dd class='thebibliography' id='bib-29'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_goyal2026elt'></a>Sahil Goyal, Swayam Agrawal, Gautham Govind Anil, Prateek Jain, Sujoy Paul, and Aditya Kusupati.
+     ELT: Elastic Looped Transformers for Visual Generation.  <a href='https://arxiv.org/abs/2604.09168'><span class='ec-lmri-10'>arXiv preprint arXiv:2604.09168</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-chng2026looped'>
+[30]  </dt><dd class='thebibliography' id='bib-30'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_chng2026looped'></a>Yong Xien Chng, Tianyi Chen, Wenwen Tong, Haiwen Diao, Zhongang Cai, Lei Yang, Ziwei Liu, Lewei
+     Lu, Dahua Lin, and Gao Huang. Looped Diffusion Transformer.  <a href='https://arxiv.org/abs/2609.40305'><span class='ec-lmri-10'>arXiv preprint arXiv:2609.40305</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-lu2026looped'>
+[31]  </dt><dd class='thebibliography' id='bib-31'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_lu2026looped'></a>Hongyuan Adam Lu, Z. L. Victor Wei, Qun Zhang, Jinrui Zeng, Bowen Cao, Lingwei Meng, Mocheng Li,
+     Zezhong Wang, Haonan Yin, Naifu Xue, Minyu Chen, Cenyuan Zhang, Zefan Zhang, Hao Wei, Jiawei
+     Zhou, Haoran Xu, Hao Yang, Ronglai Zuo, Tongda Xu, Yonghao Li, Jian Chen, Hebin Wang, Zeyu Gao,
+     Yang Li, Wei Zhao, Qimin Zhong, Siqi Liu, Yumeng Zhang, Leyan Cui, Zhangyu Wang, and Wai Lam.
+     Looped World Models.  <a href='https://arxiv.org/abs/2606.18208'><span class='ec-lmri-10'>arXiv preprint arXiv:2606.18208</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-spitznagel2026new'>
+[32]  </dt><dd class='thebibliography' id='bib-32'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_spitznagel2026new'></a>Martin Spitznagel and Janis Keuper. A New Kind of Network? Review and Reference Implementation of
+     Neural Cellular Automata.  <a href='https://arxiv.org/abs/2604.24990'><span class='ec-lmri-10'>arXiv preprint arXiv:2604.24990</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-drozdova2026diffusion'>
+[33]  </dt><dd class='thebibliography' id='bib-33'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_drozdova2026diffusion'></a>Mariia Drozdova, Aidan Sirbu, Pietro Miotti, Robert Obryk, Mayalen Etcheverry, Eyvind Niklasson, and
+     Blake Richards. Diffusion as a Training Curriculum for Timestep-Free Iterative Reasoning.  <a href='https://arxiv.org/abs/2609.01449'><span class='ec-lmri-10'>arXiv preprint
+     arXiv:2609.01449</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-spitznagel20262d'>
+[34]  </dt><dd class='thebibliography' id='bib-34'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_spitznagel20262d'></a>Martin Spitznagel and Janis Keuper. 2D Spatial Reasoning with Adaptive Neural Cellular Automata.
+     <a href='https://arxiv.org/abs/2610.08518'><span class='ec-lmri-10'>arXiv preprint arXiv:2610.08518</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-etcheverry2026reasoning'>
+[35]  </dt><dd class='thebibliography' id='bib-35'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_etcheverry2026reasoning'></a>Mayalen Etcheverry, Pietro Miotti, Aidan Sirbu, Konstantin Schürholt, Mariia Drozdova, Arna Ghosh,
+     Blaise Agüera y Arcas, James Manyika, Blake Richards, and Eyvind Niklasson. Reasoning with Neural
+     Cellular Automata.  <a href='https://arxiv.org/abs/2609.36126'><span class='ec-lmri-10'>arXiv preprint arXiv:2609.36126</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-mordvintsev2020growing'>
+[36]  </dt><dd class='thebibliography' id='bib-36'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_mordvintsev2020growing'></a>Alexander Mordvintsev, Ettore Randazzo, Eyvind Niklasson, and Michael Levin. Growing Neural Cellular
+     Automata.  <a href='https://distill.pub/2020/growing-ca/'><span class='ec-lmri-10'>Distill</span></a> 5.2, 2020, e23.
+                                                                                            
+                                                                                            
+     </p></dd><dt class='thebibliography' id='X0-pajouheshgar2023dynca'>
+[37]  </dt><dd class='thebibliography' id='bib-37'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_pajouheshgar2023dynca'></a>Ehsan Pajouheshgar, Yitao Xu, Tong Zhang, and Sabine Süsstrunk. “DyNCA: Real-time Dynamic Texture
+     Synthesis Using Neural Cellular Automata”.   <a href='https://arxiv.org/abs/2211.11417'><span class='ec-lmri-10'>Proceedings of the IEEE/CVF Conference on Computer
+     Vision and Pattern Recognition</span></a>. 2023, pp. 20742–20751.
+     </p></dd><dt class='thebibliography' id='X0-pajouheshgar2024meshnca'>
+[38]  </dt><dd class='thebibliography' id='bib-38'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_pajouheshgar2024meshnca'></a>Ehsan  Pajouheshgar,  Yitao  Xu,  Alexander  Mordvintsev,  Eyvind  Niklasson,  Tong  Zhang,  and  Sabine
+     Süsstrunk. Mesh Neural Cellular Automata.  <a href='https://arxiv.org/abs/2311.02820'><span class='ec-lmri-10'>ACM Transactions on Graphics (TOG)</span></a> 43.4, 2024, pp. 1–16.
+     </p></dd><dt class='thebibliography' id='X0-pajouheshgar2025neural'>
+[39]  </dt><dd class='thebibliography' id='bib-39'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_pajouheshgar2025neural'></a>Ehsan Pajouheshgar, Yitao Xu, Ali Abbasi, Alexander Mordvintsev, Wenzel Jakob, and Sabine Süsstrunk.
+     Neural Cellular Automata: From Cells to Pixels.  <a href='https://arxiv.org/abs/2506.22899'><span class='ec-lmri-10'>arXiv preprint arXiv:2506.22899</span></a>, 2025.
+     </p></dd><dt class='thebibliography' id='X0-pajouheshgar2024noisenca'>
+[40]  </dt><dd class='thebibliography' id='bib-40'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_pajouheshgar2024noisenca'></a>Ehsan Pajouheshgar, Yitao Xu, and Sabine Süsstrunk. “NoiseNCA: Noisy Seed Improves Spatio-Temporal
+     Continuity of Neural Cellular Automata”.   <a href='https://arxiv.org/abs/2404.06279'><span class='ec-lmri-10'>Artificial Life Conference Proceedings 36</span></a>. Vol. 2024. MIT
+     Press, 2024, p. 57.
+     </p></dd><dt class='thebibliography' id='X0-kim2026neural'>
+[41]  </dt><dd class='thebibliography' id='bib-41'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_kim2026neural'></a>Hyunsoo Kim, Ehsan Pajouheshgar, Sabine Süsstrunk, Wenzel Jakob, and Jinah Park. Neural Particle
+     Automata: Learning Self-Organizing Particle Dynamics.  <a href='https://arxiv.org/abs/2601.16096'><span class='ec-lmri-10'>arXiv preprint arXiv:2601.16096</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-kumar2022finetuning'>
+[42]  </dt><dd class='thebibliography' id='bib-42'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_kumar2022finetuning'></a>Ananya Kumar, Aditi Raghunathan, Robbie Jones, Tengyu Ma, and Percy Liang. Fine-Tuning can Distort
+     Pretrained Features and Underperform Out-of-Distribution.  <a href='https://arxiv.org/abs/2202.10054'><span class='ec-lmri-10'>arXiv preprint arXiv:2202.10054</span></a>, 2022.
+     </p></dd><dt class='thebibliography' id='X0-papadopoulos2024arrows'>
+[43]  </dt><dd class='thebibliography' id='bib-43'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_papadopoulos2024arrows'></a>Vassilis  Papadopoulos,  Jérémie  Wenger,  and  Clément  Hongler.  Arrows  of  Time  for  Large  Language
+     Models.  <a href='https://arxiv.org/abs/2401.17505'><span class='ec-lmri-10'>arXiv preprint arXiv:2401.17505</span></a>, 2024.
+     </p></dd><dt class='thebibliography' id='X0-kuang2026lpwm'>
+[44]  </dt><dd class='thebibliography' id='bib-44'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_kuang2026lpwm'></a>Yilun Kuang, Yash Dagade, Quentin Le Lidec, Lucas Maes, Randall Balestriero, and Yann LeCun. LpWM:
+     A Case for Sparse Representations in World Models.  <a href='https://arxiv.org/abs/2608.22764'><span class='ec-lmri-10'>arXiv preprint arXiv:2608.22764</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-zhang2026identifiability'>
+[45]  </dt><dd class='thebibliography' id='bib-45'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_zhang2026identifiability'></a>Xiangteng Zhang, Yang Guan, Bo Zhang, Hongyang Li, Ya-Qin Zhang, and Shengbo Eben Li. On the
+     Identifiability of Controlled World Models.  <a href='https://arxiv.org/abs/2607.22430'><span class='ec-lmri-10'>arXiv preprint arXiv:2607.22430</span></a>, 2026.
+     </p></dd><dt class='thebibliography' id='X0-tropp2010userfriendly'>
+[46]  </dt><dd class='thebibliography' id='bib-46'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_tropp2010userfriendly'></a>Joel A. Tropp. User-friendly tail bounds for sums of random matrices.  <a href='https://arxiv.org/abs/1004.4389'><span class='ec-lmri-10'>arXiv preprint arXiv:1004.4389</span></a>,
+     2010.
+     </p></dd><dt class='thebibliography' id='X0-hardt2016identity'>
+[47]  </dt><dd class='thebibliography' id='bib-47'>
+     <!-- l. 150 --><p class='noindent'><a id='cite.0_hardt2016identity'></a>Moritz Hardt and Tengyu Ma. Identity Matters in Deep Learning.   <a href='https://arxiv.org/abs/1611.04231'><span class='ec-lmri-10'>arXiv preprint arXiv:1611.04231</span></a>,
+     2016.</p></dd></dl>
+   <div class='footnotes'><a id='x1-7006x3'></a>
+<!-- l. 125 --><p class='noindent'><span class='footnote-mark'><a href='#fn1x0-bk' id='fn1x0'><sup class='textsuperscript'>1</sup></a></span><span class='ec-lmr-8'>thx for his wonderful intuition!</span></p><a id='x1-8004x4'></a>
+<!-- l. 138 --><p class='noindent'><span class='footnote-mark'><a href='#fn2x0-bk' id='fn2x0'><sup class='textsuperscript'>2</sup></a></span><span class='ec-lmr-8'>here to say, inductive bias is needed for models to learn</span></p>                                                                                            </div>
+ 
+</body> 
+</html>

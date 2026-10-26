@@ -49,8 +49,20 @@ def fetch(ids):
         chunk = ids[k:k + 50]
         url = API.format(",".join(chunk), len(chunk))
         req = urllib.request.Request(url, headers={"User-Agent": "paperlist-arxiv2bib/1.0"})
-        with urllib.request.urlopen(req, timeout=30) as r:
-            root = ET.fromstring(r.read())
+        # 直连/代理下 export.arxiv.org 的 TLS 握手偶发被掐(SSL: UNEXPECTED_EOF),
+        # 属瞬时网络抖动,自动重试几次再放弃
+        for attempt in range(4):
+            try:
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    body = r.read()
+                break
+            except OSError as e:  # URLError/SSL/超时都是 OSError 的子类
+                if attempt == 3:
+                    raise
+                wait = (attempt + 1) * 3
+                print(f"  网络请求失败({type(e).__name__}),{wait} 秒后重试({attempt + 2}/4)...", file=sys.stderr)
+                time.sleep(wait)
+        root = ET.fromstring(body)
         for e in root.findall("a:entry", NS):
             title = e.findtext("a:title", "", NS)
             if not title or e.findtext("a:id", "", NS).endswith("/api/errors"):
