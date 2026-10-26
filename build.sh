@@ -23,6 +23,7 @@ perl -pi -e 's|<title>[^<]*</title>|<title>Paper List 文献清单</title>|' doc
 
 # 叠加自定义主题(theme.css 在 tex4ht 默认样式之后加载,覆盖其版面规则)
 cp css/theme.css docs/theme.css
+cp -r css/fonts docs/fonts  # 注:字体相对路径按 theme.css 所在目录解析,与 index.html 同级
 perl -pi -e 's|</head>|<link href="theme.css" rel="stylesheet" type="text/css" /></head>|' docs/paperlist.html
 
 # GitHub Pages 根地址需要 index.html
